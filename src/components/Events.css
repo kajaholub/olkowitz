@@ -1,0 +1,125 @@
+.events-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.events-container h2 {
+  color: var(--primary-color);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.events-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+.events-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.event-card {
+  background: white;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.event-card:hover {
+  box-shadow: 0 4px 12px rgba(37, 150, 190, 0.15);
+  transform: translateX(4px);
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 150px;
+  text-align: center;
+}
+
+.date-badge {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.time-badge {
+  font-size: 0.85rem;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.event-content h3 {
+  color: var(--primary-color);
+  margin: 0 0 0.75rem 0;
+  font-size: 1.3rem;
+}
+
+.event-location {
+  color: var(--text-light);
+  margin: 0.5rem 0;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.event-description {
+  color: var(--text-color);
+  margin: 0.75rem 0 1rem 0;
+  line-height: 1.5;
+}
+
+.event-btn {
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.event-btn:hover {
+  background: var(--primary-dark);
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .event-date {
+    flex-direction: row;
+    min-width: auto;
+  }
+
+  .date-badge,
+  .time-badge {
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+
+  .events-container h2 {
+    font-size: 1.6rem;
+  }
+}
